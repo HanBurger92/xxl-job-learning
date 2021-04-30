@@ -1,0 +1,24 @@
+xxl:
+  job:
+    admin:
+      # 地址为刚刚配置的调度中心的访问地址
+      address: http://localhost:8080
+    executor:
+      # 自定义appName（执行器名称）
+      appname: lrt-executor
+      # ip 可以写 （程序跑在的机器ip上），也可以不写
+      ip:
+      port: 30150
+      # 设置日志过期时间  -1表示永不过期
+      logretentiondays: -1
+      accessToken:
+
+server:
+  port: 9999
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: Baohan9922
